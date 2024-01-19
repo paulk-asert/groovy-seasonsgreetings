@@ -8,5 +8,5 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.apache.groovy:groovy:5.0.0-alpha-4'
+    implementation 'org.apache.groovy:groovy:5.0.0-alpha-5'
 }

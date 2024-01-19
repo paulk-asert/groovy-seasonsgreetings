@@ -19,11 +19,11 @@ assert '🧑‍🎄' == /\uD83E\uDDD1\u200d\uD83C\uDF84/
 assert '🧑‍🎄' ==~ /\x{1f9d1}\x{200d}\x{1f384}/
 assert '🧑‍🎄' ==~ /\N{ADULT}\N{ZERO WIDTH JOINER}\N{CHRISTMAS TREE}/
 
-assert '👨‍👩‍👧'.codePoints == ['👨', '‍', '👩', '‍', '👧']*.codePoints*.toList().flatten()
+assert '👨‍👩‍👧'.codePoints == ['👨', '‍', '👩', '‍', '👧']*.codePoints.flatten()
 assert '👨‍👩‍👧' ==~ /\x{1f468}\x{200d}\x{1f469}\x{200d}\x{1f467}/
 assert '👨‍👩‍👧' ==~ /\N{MAN}\N{ZERO WIDTH JOINER}\N{WOMAN}\N{ZERO WIDTH JOINER}\N{GIRL}/
 
-assert '🙋🏻‍♀️'.codePoints == ['🙋🏻', '‍', '♀️']*.codePoints*.toList().flatten()
+assert '🙋🏻‍♀️'.codePoints == ['🙋🏻', '‍', '♀️']*.codePoints.flatten()
 assert '🙋🏻‍♀️'.codePoints.size() == 5
 assert '🙋🏻‍♀️'.codePoints.eachWithIndex { cp, idx ->
     switch(idx) {
